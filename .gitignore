@@ -1,0 +1,8 @@
+*.iml
+.idea/*
+!.idea/runConfigurations/
+
+# Kotlin & Gradle
+build/
+.gradle/
+out/
