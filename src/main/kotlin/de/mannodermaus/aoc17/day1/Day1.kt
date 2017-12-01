@@ -5,7 +5,7 @@ import de.mannodermaus.aoc17.util.printTitle
 import de.mannodermaus.aoc17.util.readResource
 
 private val part1: (String) -> Int = { line ->
-  val chars = line.toCharArray().toList()
+  val chars = line.toCharArray()
 
   chars
       // Compare each digit to its right neighbor, wrapping around at the end
@@ -15,7 +15,7 @@ private val part1: (String) -> Int = { line ->
 }
 
 private val part2: (String) -> Int = { line ->
-  val chars = line.toCharArray().toList()
+  val chars = line.toCharArray()
   assert(chars.size % 2 == 0) { "They said the list's length was even :(" }
 
   // Index offset used for comparisons
@@ -32,11 +32,11 @@ fun main(args: Array<String>) {
   printTitle(day = 1, title = "Inverse Captcha")
   val input = readResource("day1.txt")
 
-  printSolution(part = 1) {
+  printSolution(1) {
     input.map(part1).forEach { println(it) }
   }
 
-  printSolution(part = 2) {
+  printSolution(2) {
     input.map(part2).forEach { println(it) }
   }
 }
